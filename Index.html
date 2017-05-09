@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <div class="container-fluid" id="__TopNavigation">
+        <div class="col-md-1" id="__LogoContainer">
+            LOGO
+        </div>
+
+        <div class="col-md-2" id="__TitleContainer">
+            BUSINESS HEAD REPORT
+        </div>
+		<!-- tab containers !-->
+        <div class="col-md-6">
+            <div id="inner">
+                <div class="tabs" id="SummaryTab"> SUMMARY </div>
+
+                <div class="tabs activeTab" id="NoaTab"> NOA ANALYSIS </div>
+
+                <div class="tabs" id="BalancesTab"> BALANCES </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="col-md-2">
+            <div>Select Time Period</div>
+            <div class="dropdown" id="__TimePeriodFilterContainer">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="__TimePeriodFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id="__TimePeriodFilterValue">Month</span>
+                    <div class="caret"></div>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="__TimePeriodFilter" id="__TimePeriodDropDown">
+                    <div class="dropdown-item">MONTH</div>
+                    <div class="dropdown-item">YEAR</div>
+                    <div class="dropdown-item">WEEK</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <span>Select Month</span>
+            <div class="dropdown" id="__MonthFilterContainer">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="__MonthFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id="__MonthFilterValue">DEC</span>
+                    <div class="caret"></div>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="__MonthFilter">
+                    <div class="dropdown-item">JAN</div>
+                    <div class="dropdown-item">FEB</div>
+                    <div class="dropdown-item">MAR</div>
+					<div class="dropdown-item">DEC</div>
+                </div>
+            </div>
+        </div>
+		<div class="col-md-2">
+            <span>Select Region</span>
+            <div class="dropdown"  id="__RegionFilterContainer">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="__RegionFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id="__RegionFilterValue">SOUTH</span>
+                    <div class="caret"></div>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="__RegionFilter">
+                    <div class="dropdown-item">EAST</div>
+                    <div class="dropdown-item">WEST</div>
+                    <div class="dropdown-item">NORTH</div>
+					<div class="dropdown-item">SOUTH</div>
+                </div>
+            </div>
+        </div>
+		<div class="col-md-2">
+            <span>Account: Salary or Non-salary</span>
+            <div class="dropdown" id="__AccountFilterContainer">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="__AccountFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id="__AccountFilterValue">BOTH</span>
+                    <div class="caret"></div>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="__AccountFilter">
+                    <div class="dropdown-item">SALARY</div>
+                    <div class="dropdown-item">NON-SALARY</div>
+                    <div class="dropdown-item">BOTH</div>
+                </div>
+            </div>
+        </div>
+		<div class="col-md-2">
+            <span>Segment</span>
+            <div class="dropdown" id="__SegmentFilterContainer">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="__SegmentFilter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span id="__SegmentFilterValue">ALL</span>
+                    <div class="caret"></div>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="__SegmentFilter">
+                    <div class="dropdown-item">ALL</div>
+                    <div class="dropdown-item">VALUE 1</div>
+                    <div class="dropdown-item">VALUE 2</div>
+                </div>
+            </div>
+        </div>
+		<div class="col-md-2" id="__SubmitButton">
+			<button type="button" class="btn btn-warning">SUBMIT</button>
+		</div>
+    </div>
+	<!-- tab data container!-->
+	<div>
+		<!-- Summary Tab container!-->
+		<div id="TabSummary">
+			<div class="section firstsection">
+				<div class="banner">
+					BUDGET SUMMARY
+				</div>
+				<div class="chartContainer"></div>
+			</div>
+			
+			<div class="section">
+				<div class="banner">
+					BALANCE DISTRIBUTION
+				</div>
+				<div class="chartContainer" id="__ColumnChartContainer"></div>
+			</div>
+				
+			<div class="section">
+				<div class="banner">
+					REGIONS PERFORMANCE
+				</div>
+				<div class="chartContainer"></div>
+			</div>
+			
+			<div class="section">
+				<div class= "banner">
+					REGIONAL PERFORMANCE
+				</div>
+				<div class="chartContainer" id="__GeoChart"></div>
+			</div>
+		</div>
+		
+		<!-- Nao analysis Tab container!-->
+		<div id="TabNoa">
+			<div class="section firstsection">
+				<div class="banner">
+					ANNUAL CALENDAR
+				</div>
+				<div class="chartContainer"></div>
+			</div>
+			
+			<div class="section">
+				<div class="banner">
+					ACCOUNT DISTRIBUTION
+				</div>
+				<div class="chartContainer" id="__TreeMapChartContainer"></div>
+			</div>
+				
+			<div class="section">
+				<div class="banner">
+					RATE OF ACHIVEMENT
+				</div>
+				<div class="chartContainer"></div>
+			</div>
+			
+			<div class="section">
+				<div class= "banner">
+					PERFORMANCE TREND
+				</div>
+				<div id="__LineChartContainer"></div>
+			</div>
+		</div>
+		<!-- Balances Tab Container !-->
+		<div id="TabBalances">
+			<div class="section firstsection">
+				<div class="banner">
+					ANNUAL CALENDAR
+				</div>
+				<div class="chartContainer"></div>
+			</div>
+			
+			<div class="section">
+				<div class="banner">
+					ACCOUNT DISTRIBUTION
+				</div>
+				<div class="chartContainer"></div>
+			</div>
+				
+			<div class="section">
+				<div class="banner">
+					RATE OF ACHIVEMENT
+				</div>
+				<div class="chartContainer"></div>
+			</div>
+			
+			<div class="section">
+				<div class= "banner">
+					PERFORMANCE TREND
+				</div>
+				<div class="chartContainer"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>    
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/charts.js"></script>
+
+</html>

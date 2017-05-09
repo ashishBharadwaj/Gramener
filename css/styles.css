@@ -1,0 +1,79 @@
+#__TopNavigation {
+    background-color: #1F7BAA;
+}
+
+#__LogoContainer {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px 10px 10px 0;
+    border-right: 1px solid #3C3C3C;
+}
+
+#__TitleContainer {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px 10px 10px 0;
+}
+
+.tabs {
+    display: inline-block;
+    color: #FFFFFF;
+	padding:10px;
+	cursor:pointer;
+	background-color: #1F6386
+}
+.dropdown-item{
+	cursor:pointer;
+}
+.activeTab {
+    background-color: #0F3D54;
+}
+
+#container {
+    margin-top: 50px;
+}
+
+.banner {
+    background-color: #1F7BAA;
+    border-radius: 5px;
+	color:#FFFFFF;
+	padding:10px;
+}
+.section{
+	width:1200px;
+	margin:0 auto;
+}
+.firstsection{
+	margin-top:20px;
+}
+
+#inner {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#__TimePeriodFilter .caret {
+    margin-left: 84px;
+}
+
+#__MonthFilter .caret {
+    margin-left: 92px;
+}
+#__RegionFilter .caret {
+    margin-left: 73px;
+}
+#__AccountFilter .caret {
+    margin-left: 82px;
+}
+#__SegmentFilter .caret {
+    margin-left: 94px;
+}
+#__SubmitButton{
+	margin-top:20px;
+}
+.chartContainer{
+	height:400px;
+}
+#TabSummary, #TabBalances{
+	display:none;
+}
